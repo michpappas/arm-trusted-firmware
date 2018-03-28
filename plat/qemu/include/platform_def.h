@@ -173,6 +173,9 @@
 #define MAX_IO_DEVICES			3
 #define MAX_IO_HANDLES			4
 
+#define TSP_SEC_MEM_BASE		BL32_DRAM_BASE
+#define TSP_SEC_MEM_SIZE		(BL32_DRAM_LIMIT - BL32_DRAM_BASE)
+
 /*
  * PL011 related constants
  */
@@ -217,6 +220,8 @@
 #define QEMU_IRQ_SEC_SGI_5		13
 #define QEMU_IRQ_SEC_SGI_6		14
 #define QEMU_IRQ_SEC_SGI_7		15
+
+#define TSP_IRQ_SEC_PHY_TIMER		QEMU_IRQ_SEC_SGI_5  /* FIXME is that correct? */
 
 /*
  * DT related constants
